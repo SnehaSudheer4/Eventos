@@ -1,0 +1,163 @@
+.NavbarItems{
+    display: flex;
+    background-color: rgb(0, 0, 0); /* Use RGBA with an alpha value less than 1 for transparency */
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    /* box-shadow: 0 5px 15px 0 rgba(247, 244, 244, 0.25); */
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 9999;
+    margin-top: -25px;
+}
+.navbar-logo
+{
+    color: rgb(254, 254, 254);
+    font-size: 2rem;
+    cursor: pointer;
+    margin-top: 20px;
+
+}
+
+.nav-menu{
+    display: grid;
+    grid-template-columns:repeat(6,auto) ;
+    grid-area: 10px;
+    list-style: none;
+    align-items: center;
+}
+
+.nav-links{
+   
+    color: rgb(252, 249, 249);
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.7rem 1rem;
+    white-space: nowrap;
+    text-decoration: none !important;
+}
+
+.nav-links i{
+    padding-right: 10px;
+}
+
+.nav-links:hover{
+   background-color: rgb(252, 252, 252); 
+   border-radius:2px ;
+   transition: all 0.2s ease-in-out;
+   color: #140c0c;
+}
+.nav-links-mobile{
+    display: none;
+}
+button{
+    background-color: #f7f8f3;
+    border-radius: 5px;
+    border-style: none;
+    box-sizing: border-box;
+    color: #140c0c;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    height: 40px;
+    line-height: 20px;
+    list-style: none;
+    margin: 0;
+    outline: none;
+    padding: 10px 16px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    transition: color 100ms;
+    vertical-align: baseline;
+   
+}
+
+.menu-icons{
+    display: none;
+}
+
+button:hover{
+    background-color: rgb(239, 204, 204);
+    color: #fff;
+}
+@media screen and (max-width: 850px) {
+ .nav-menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background:rgb(134, 132, 134) ;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left:-100%;
+    opacity: 1;
+    align-items: center;
+    padding: 80px 0 30px 0;
+    margin: 0;
+    transition:0.3s ease-in-out ;
+   
+ }
+
+.nav-menu.active{
+    left: 0;
+    opacity: 1;
+    z-index: -1;
+    transition:0.3s ease-in-out ;
+    border-radius:13px ;
+    position: fixed;
+}
+
+ .nav-links{
+    display: block;
+    width: 80%;
+    font-size: 1.2rem;
+    padding: 1.4rem 0;
+    color: #140c0c;
+ }
+ .nav-links:hover{
+    background: rgb(251, 247, 247);
+    transition: none;
+    width: 170%;
+
+ }
+ /* button{
+display: none;
+ } */
+ .nav-links-mobile{
+    display: block;
+    text-align: center;
+    padding: 1.5rem;
+    margin: auto;
+    border-radius: 4px;
+    width: 80%;
+    background: rgb(101, 167, 208);
+    text-decoration: none;
+    color: #a93d3d;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+ }
+
+ .menu-icons{
+    display: block;
+}
+.menu-icons i{
+   font-size: 1rem;
+   color: #222;
+   cursor: pointer;
+}
+
+    .navbar-logo{
+        color: #140c0c;
+    }
+
+
+}
